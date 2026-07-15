@@ -129,7 +129,7 @@ function mostrarProdutos(produtos) {
                     class="botao-card"
                     onclick="pedirProduto('${produto.nome}', ${produto.preco})">
 
-                    🛒 Pedir Agora
+                    📞​ Pedir Agora
 
                 </button>
 
@@ -288,7 +288,7 @@ function atualizarStatusLoja() {
 
                 <div class="status-item">
 
-                    <span>📅 Hoje</span>
+                    <span>🗓️ Hoje</span>
 
                     <strong>${NOMES_DIAS[dia]}</strong>
 
@@ -298,7 +298,7 @@ function atualizarStatusLoja() {
 
                     <span>🕒 Fecha às</span>
 
-                    <strong>${String(periodoAtual.fecha).padStart(2, "0")}:00</strong>
+                    <strong>${periodoAtual.fecha === 24 ? "00" : String(periodoAtual.fecha).padStart(2, "0")}:00</strong>
 
                 </div>
 
@@ -340,7 +340,7 @@ function atualizarStatusLoja() {
 
                         <div class="status-item">
 
-                            <span>📅 Hoje</span>
+                            <span>🗓️ Hoje</span>
 
                             <strong>${NOMES_DIAS[dia]}</strong>
 
@@ -378,7 +378,7 @@ function atualizarStatusLoja() {
 
                         <div class="status-item">
 
-                            <span>📅 Próxima abertura</span>
+                            <span>🗓️ Próxima abertura</span>
 
                             <strong>${NOMES_DIAS[indice]}</strong>
 
