@@ -6,6 +6,16 @@
 // Elemento onde os produtos serão exibidos
 const listaProdutos = document.getElementById("lista-produtos");
 
+const pesquisa = document.getElementById("pesquisa");
+
+const botoesCategoria = document.querySelectorAll(".categoria");
+
+const contadorProdutos = document.getElementById("contador-produtos");
+
+let todosProdutos = [];
+
+let categoriaAtual = "Todos";
+
 // =======================================
 // CARREGAR PRODUTOS
 // =======================================
@@ -22,7 +32,8 @@ async function carregarProdutos() {
 
         const produtos = await resposta.json();
 
-        mostrarProdutos(produtos);
+        todosProdutos = produtos;
+        mostrarProdutos(todosProdutos);
 
     }
 
@@ -48,6 +59,8 @@ async function carregarProdutos() {
 function mostrarProdutos(produtos) {
 
     listaProdutos.innerHTML = "";
+
+    contadorProdutos.textContent = `${produtos.length} produtos`;
 
     produtos.forEach(produto => {
 
@@ -410,3 +423,48 @@ carregarProdutos();
 atualizarStatusLoja();
 
 setInterval(atualizarStatusLoja, 60000);
+
+// =======================================
+// PESQUISA
+// =======================================
+
+pesquisa.addEventListener("input", filtrarProdutos);
+
+botoesCategoria.forEach(botao=>{
+
+    botao.addEventListener("click",()=>{
+
+        botoesCategoria.forEach(b=>b.classList.remove("ativa"));
+
+        botao.classList.add("ativa");
+
+        categoriaAtual = botao.dataset.categoria;
+
+        filtrarProdutos();
+
+    });
+
+});
+
+function filtrarProdutos(){
+
+    const texto = pesquisa.value.toLowerCase();
+
+    const produtosFiltrados = todosProdutos.filter(produto=>{
+
+        const nome = produto.nome.toLowerCase();
+
+        const categoria =
+            categoriaAtual==="Todos" ||
+            produto.categoria===categoriaAtual;
+
+        const pesquisaNome =
+            nome.includes(texto);
+
+        return categoria && pesquisaNome;
+
+    });
+
+    mostrarProdutos(produtosFiltrados);
+
+}

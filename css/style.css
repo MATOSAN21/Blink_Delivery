@@ -743,3 +743,21 @@ text-align:center;
 }
 
 }
+
+.titulo-produtos{
+
+    text-align:center;
+
+    margin:35px 0 20px;
+
+}
+
+.titulo-produtos h2{
+
+    color:white;
+
+    font-size:32px;
+
+    font-weight:bold;
+
+}
