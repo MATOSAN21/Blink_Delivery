@@ -1,6 +1,6 @@
-/* ==========================
-   RESET
-========================== */
+/* ===========================================
+   BLINK DELIVERY V2
+=========================================== */
 
 *{
     margin:0;
@@ -8,55 +8,65 @@
     box-sizing:border-box;
 }
 
-/* ==========================
-   CORES
-========================== */
-
 :root{
 
-    --verde:#2DFF6A;
-    --verde-hover:#23d95a;
-    --preto:#0f0f0f;
-    --cinza:#1b1b1b;
-    --cinza-claro:#2a2a2a;
+    --verde:#39ff6f;
+    --verdeHover:#2be05d;
+    --preto:#0d0d0d;
+    --preto2:#151515;
+    --cinza:#1d1d1d;
+    --cinza2:#262626;
     --branco:#ffffff;
     --texto:#d8d8d8;
+    --sombra:0 10px 35px rgba(0,0,0,.35);
 
 }
-
-/* ==========================
-   BODY
-========================== */
 
 body{
 
-    background:var(--preto);
+    background:#0d0d0d;
 
-    color:var(--branco);
+    color:white;
 
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 
 }
 
-/* ==========================
-   HERO
-========================== */
+/*======================
+HERO
+=======================*/
 
 .hero{
+
+    background:
+
+    radial-gradient(circle at top,#1f1f1f,#0d0d0d);
 
     padding:70px 20px;
 
     text-align:center;
 
-    background:linear-gradient(180deg,#161616,#0f0f0f);
-
 }
 
 .hero-content{
 
-    max-width:600px;
+    width:min(900px,95%);
 
     margin:auto;
+
+}
+
+.hero-acoes{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-top:30px;
 
 }
 
@@ -70,9 +80,7 @@ body{
 
 .hero h1{
 
-    font-size:40px;
-
-    margin-bottom:10px;
+    font-size:48px;
 
     letter-spacing:2px;
 
@@ -80,93 +88,141 @@ body{
 
 .slogan{
 
-    color:var(--texto);
+    margin-top:10px;
 
-    font-size:18px;
+    color:#bfbfbf;
 
-    margin-bottom:20px;
+    font-size:19px;
 
 }
-
-/* ==========================
-   STATUS
-========================== */
 
 .status{
 
-    display:inline-block;
+    width:420px;
 
-    background:#191919;
+    background:#181818;
 
     border:1px solid #2e2e2e;
 
-    padding:18px 30px;
+    border-radius:22px;
 
-    border-radius:18px;
+    padding:25px;
 
-    line-height:28px;
-
-    margin-bottom:25px;
-
-    min-width:260px;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
 
 }
 
-/* ==========================
-   BOTÃO
-========================== */
+.status-titulo{
 
-.btn-whatsapp{
-
-    display:inline-block;
-
-    background:var(--verde);
-
-    color:black;
-
-    padding:18px 35px;
-
-    text-decoration:none;
-
-    font-size:18px;
+    font-size:30px;
 
     font-weight:bold;
 
-    border-radius:15px;
+    margin-bottom:20px;
 
-    transition:.3s;
+    text-align:center;
+
+}
+
+.status-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+.status-item{
+
+    background:#222;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+.status-item span{
+
+    display:block;
+
+    color:#9b9b9b;
+
+    font-size:13px;
+
+    margin-bottom:6px;
+
+}
+
+.status-item strong{
+
+    font-size:18px;
+
+}
+
+.btn-whatsapp{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    background:var(--verde);
+
+    color:#111;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    padding:18px 40px;
+
+    border-radius:14px;
+
+    transition:.25s;
 
 }
 
 .btn-whatsapp:hover{
 
-    background:var(--verde-hover);
+    transform:translateY(-3px);
 
-    transform:scale(1.05);
+    background:var(--verdeHover);
 
 }
-
-/* ==========================
-   ENTREGA
-========================== */
 
 .info-entrega{
 
-    margin-top:25px;
+    margin-top:35px;
 
-    color:var(--texto);
+    display:flex;
 
-    line-height:28px;
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    color:#bbbbbb;
 
 }
 
-/* ==========================
-   PESQUISA
-========================== */
+/*======================
+PESQUISA
+=======================*/
 
 .pesquisa{
 
-    padding:30px 20px;
+    width:min(1200px,95%);
+
+    margin:40px auto;
 
 }
 
@@ -174,25 +230,21 @@ body{
 
     width:100%;
 
-    max-width:750px;
-
-    display:block;
-
-    margin:auto;
-
-    padding:20px;
+    padding:18px 25px;
 
     border-radius:15px;
 
-    border:1px solid #2f2f2f;
+    border:none;
 
-    background:#181818;
+    background:#1a1a1a;
 
     color:white;
 
     font-size:17px;
 
-    transition:.2s;
+    outline:none;
+
+    border:1px solid #2d2d2d;
 
 }
 
@@ -200,29 +252,45 @@ body{
 
     border-color:var(--verde);
 
-    box-shadow:0 0 15px rgba(45,255,106,.25);
-
 }
 
-/* ==========================
-   CATEGORIAS
-========================== */
+/*======================
+CATEGORIAS
+=======================*/
 
 .categorias{
 
+    width:min(1200px,95%);
+
+    margin:auto;
+
     display:flex;
 
-    justify-content:center;
+    gap:15px;
 
-    gap:12px;
+    overflow-x:auto;
 
-    flex-wrap:wrap;
+    padding-bottom:10px;
 
-    padding:0 20px 35px;
+}
+
+.categorias::-webkit-scrollbar{
+
+    height:6px;
+
+}
+
+.categorias::-webkit-scrollbar-thumb{
+
+    background:#444;
+
+    border-radius:20px;
 
 }
 
 .categoria{
+
+    flex:none;
 
     border:none;
 
@@ -230,13 +298,13 @@ body{
 
     border-radius:30px;
 
-    background:var(--cinza);
+    cursor:pointer;
+
+    background:#202020;
 
     color:white;
 
-    cursor:pointer;
-
-    transition:.3s;
+    transition:.25s;
 
 }
 
@@ -248,7 +316,7 @@ body{
 
 }
 
-.ativa{
+.categoria.ativa{
 
     background:var(--verde);
 
@@ -256,13 +324,53 @@ body{
 
 }
 
-/* ==========================
-   CATÁLOGO
-========================== */
+/*======================
+BANNER
+=======================*/
+
+.banner{
+
+    width:min(1200px,95%);
+
+    margin:45px auto;
+
+}
+
+.banner-box{
+
+    background:linear-gradient(130deg,#2eff6b,#0f6e31);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    color:#111;
+
+}
+
+.banner-box h2{
+
+    font-size:34px;
+
+}
+
+.banner-box p{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+}
+
+/*======================
+CATÁLOGO
+=======================*/
 
 .catalogo{
 
-    padding:20px;
+    width:min(1400px,95%);
+
+    margin:70px auto;
 
 }
 
@@ -270,29 +378,25 @@ body{
 
     text-align:center;
 
-    margin-bottom:40px;
+    font-size:36px;
 
-    font-size:30px;
+    margin-bottom:45px;
 
 }
 
 #lista-produtos{
 
-    max-width:1400px;
-
-    margin:auto;
-
     display:grid;
 
-    grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
 
     gap:30px;
 
 }
 
-/* ==========================
-   CARD
-========================== */
+/*======================
+CARD
+=======================*/
 
 .card{
 
@@ -300,15 +404,17 @@ body{
 
     border:1px solid #2b2b2b;
 
-    border-radius:18px;
+    border-radius:22px;
 
     overflow:hidden;
 
-    transition:.25s;
+    transition:.30s;
 
     display:flex;
 
     flex-direction:column;
+
+    position:relative;
 
 }
 
@@ -318,51 +424,151 @@ body{
 
     border-color:var(--verde);
 
-    box-shadow:0 0 20px rgba(45,255,106,.20);
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
 
 }
 
-.card img{
+/*======================
+IMAGEM
+=======================*/
 
-    width:100%;
-
-    height:280px;
-
-    object-fit:contain;
+.card-imagem{
 
     background:white;
 
-    padding:20px;
+    height:270px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+    position:relative;
 
 }
 
-.card-body{
+.card-imagem img{
 
-    padding:20px;
+    max-width:100%;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+    transition:.35s;
+
+}
+
+.card:hover .card-imagem img{
+
+    transform:scale(1.08);
+
+}
+
+/*======================
+BADGES
+=======================*/
+
+.badge{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    background:#ff4040;
+
+    color:white;
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+.badge-verde{
+
+    background:var(--verde);
+
+    color:black;
+
+}
+
+/*======================
+INFORMAÇÕES
+=======================*/
+
+.card-body{
 
     display:flex;
 
     flex-direction:column;
 
+    padding:22px;
+
     flex:1;
+
+}
+
+.categoria-produto{
+
+    color:var(--verde);
+
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
 
 }
 
 .card-body h3{
 
-    font-size:22px;
+    font-size:24px;
 
-    margin-bottom:10px;
+    margin-bottom:8px;
 
 }
 
-.card-body p{
+.descricao{
 
-    color:#bfbfbf;
+    color:#a8a8a8;
+
+    line-height:24px;
+
+    margin-bottom:20px;
+
+    min-height:48px;
+
+}
+
+/*======================
+PREÇO
+=======================*/
+
+.preco-box{
+
+    margin-top:auto;
+
+}
+
+.preco-antigo{
+
+    color:#777;
+
+    text-decoration:line-through;
 
     font-size:15px;
-
-    margin-bottom:10px;
 
 }
 
@@ -370,33 +576,35 @@ body{
 
     color:var(--verde);
 
-    font-size:28px;
+    font-size:34px;
 
     font-weight:bold;
 
-    margin:15px 0;
+    margin:6px 0 20px;
 
 }
 
-.botao-card{
+/*======================
+BOTÃO
+=======================*/
 
-    margin-top:auto;
+.botao-card{
 
     width:100%;
 
     border:none;
 
+    border-radius:14px;
+
     background:var(--verde);
 
     color:black;
 
-    padding:15px;
-
-    border-radius:12px;
+    font-weight:bold;
 
     font-size:17px;
 
-    font-weight:bold;
+    padding:16px;
 
     cursor:pointer;
 
@@ -406,26 +614,132 @@ body{
 
 .botao-card:hover{
 
-    background:var(--verde-hover);
+    background:var(--verdeHover);
 
     transform:scale(1.03);
 
 }
 
-/* ==========================
-   FOOTER
-========================== */
+/*======================
+RODAPÉ
+=======================*/
 
 footer{
 
-    margin-top:70px;
-
-    padding:40px;
-
-    text-align:center;
+    margin-top:90px;
 
     background:#090909;
 
+    padding:60px 20px;
+
+    text-align:center;
+
     color:#8d8d8d;
+
+}
+
+footer p{
+
+    margin:8px 0;
+
+}
+
+/*======================
+RESPONSIVO
+=======================*/
+
+@media(max-width:900px){
+
+.hero{
+
+padding:50px 20px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.logo{
+
+width:140px;
+
+}
+
+.banner-box{
+
+padding:30px;
+
+}
+
+.banner-box h2{
+
+font-size:28px;
+
+}
+
+.catalogo h2{
+
+font-size:30px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.status{
+
+min-width:100%;
+
+font-size:16px;
+
+}
+
+.btn-whatsapp{
+
+width:100%;
+
+}
+
+.info-entrega{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+#lista-produtos{
+
+grid-template-columns:1fr;
+
+}
+
+.card-imagem{
+
+height:230px;
+
+}
+
+.card-body h3{
+
+font-size:20px;
+
+}
+
+.preco{
+
+font-size:30px;
+
+}
+
+.banner-box{
+
+text-align:center;
+
+}
 
 }

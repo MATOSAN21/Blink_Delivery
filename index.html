@@ -2,34 +2,43 @@
 <html lang="pt-PT">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blink Delivery</title>
+    <title>Blink Delivery | Bebidas ao Domicílio</title>
+
+    <meta name="description" content="Bebidas geladas entregues rapidamente em Braga.">
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-    <!-- ==========================
-         HERO
-    =========================== -->
+<!-- ===========================
+HEADER
+=========================== -->
 
-    <header class="hero">
+<header class="hero">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <img src="assets/logo.png" alt="Logo Blink" class="logo">
+        <img src="assets/logo.png"
+             alt="Blink Delivery"
+             class="logo">
 
-            <h1>BLINK DELIVERY</h1>
+        <h1>Blink Delivery</h1>
 
-            <p class="slogan">
-                Geladas, rápidas e à tua porta 🍻
-            </p>
+        <p class="slogan">
+            ⚡ Geladas, rápidas e à tua porta.
+        </p>
+
+        <div class="hero-acoes">
 
             <div id="status-loja" class="status">
-                Verificando horário...
+              Verificando...
             </div>
 
             <a
@@ -41,98 +50,177 @@
 
             </a>
 
-            <div class="info-entrega">
+        </div>
 
-                <p>🚚 Entrega rápida em Braga</p>
+        <div class="info-entrega">
 
-                <p>⚡ Média de 20 a 30 minutos</p>
+            <div>🚚 Entrega rápida em Braga</div>
 
-            </div>
+            <div>🕒 Média de 20-30 minutos</div>
+
+            <div>🍻 Bebidas sempre geladas</div>
 
         </div>
 
-    </header>
+    </div>
 
-    <!-- ==========================
-         CONTEÚDO PRINCIPAL
-    =========================== -->
+</header>
 
-    <main>
+<!-- ===========================
+MAIN
+=========================== -->
 
-        <!-- Pesquisa -->
+<main>
 
-        <section class="pesquisa">
+    <!-- Pesquisa -->
 
-            <input
-                type="text"
-                id="pesquisa"
-                placeholder="🔍 Procurar bebida...">
+    <section class="pesquisa">
 
-        </section>
+        <input
+            id="pesquisa"
+            type="text"
+            placeholder="🔍 Procurar bebida...">
 
-        <!-- Categorias -->
+    </section>
 
-        <section class="categorias">
+    <!-- Categorias -->
 
-            <button class="categoria ativa">
-                Todos
-            </button>
+    <section class="categorias">
 
-            <button class="categoria">
-                Whisky
-            </button>
+        <button class="categoria ativa" data-categoria="Todos">
+            Todos
+        </button>
 
-            <button class="categoria">
-                Vodka
-            </button>
+        <button class="categoria" data-categoria="Whisky">
+            Whisky
+        </button>
 
-            <button class="categoria">
-                Gin
-            </button>
+        <button class="categoria" data-categoria="Vodka">
+            Vodka
+        </button>
 
-            <button class="categoria">
-                Cerveja
-            </button>
+        <button class="categoria" data-categoria="Gin">
+            Gin
+        </button>
 
-            <button class="categoria">
-                Energéticos
-            </button>
+        <button class="categoria" data-categoria="Rum">
+            Rum
+        </button>
 
-            <button class="categoria">
-                Vinhos
-            </button>
+        <button class="categoria" data-categoria="Cerveja">
+            Cerveja
+        </button>
 
-        </section>
+        <button class="categoria" data-categoria="Vinho">
+            Vinho
+        </button>
 
-        <!-- Produtos -->
+        <button class="categoria" data-categoria="Energético">
+            Energético
+        </button>
 
-        <section class="catalogo">
+    </section>
 
-            <h2>🍻 Escolhe a tua bebida</h2>
+    <!-- Banner -->
 
-            <div id="lista-produtos">
+    <section class="banner">
 
-                <!-- Os produtos aparecerão aqui automaticamente -->
+        <div class="banner-box">
 
-            </div>
+            <h2>🍾 Catálogo Blink</h2>
 
-        </section>
+            <p>
 
-    </main>
+                Escolha sua bebida favorita e faça o pedido diretamente pelo WhatsApp.
 
-    <!-- ==========================
-         RODAPÉ
-    =========================== -->
+            </p>
 
-    <footer>
+        </div>
 
-        <p>© 2025 Blink Delivery</p>
+    </section>
 
-        <p>📍 Braga - Portugal</p>
+    <!-- Produtos -->
 
-    </footer>
+    <section class="catalogo">
 
-    <script src="js/script.js"></script>
+        <div class="titulo-catalogo">
+
+            <h2>🍻 Nossos Produtos</h2>
+
+            <span id="contador-produtos"></span>
+
+        </div>
+
+        <div id="lista-produtos">
+
+            <!-- Produtos serão carregados pelo JavaScript -->
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ===========================
+BOTÃO FLUTUANTE
+=========================== -->
+
+<a
+
+href="https://wa.me/351929137722"
+
+target="_blank"
+
+class="whatsapp-flutuante"
+
+title="WhatsApp">
+
+💬
+
+</a>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <img
+            src="assets/logo.png"
+            class="footer-logo"
+            alt="Blink">
+
+        <h3>Blink Delivery</h3>
+
+        <p>
+
+            🍻 Entrega rápida de bebidas em Braga.
+
+        </p>
+
+        <div class="footer-info">
+
+            <span>📍 Braga</span>
+
+            <span>🚚 Delivery</span>
+
+            <span>⚡ Todos os fins de semana</span>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2025 Blink Delivery
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="js/script.js"></script>
 
 </body>
 
