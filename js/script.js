@@ -196,9 +196,7 @@ function mostrarProdutos(produtos) {
             ? `<div class="preco-antigo">€ ${Number(produto.precoAntigo).toFixed(2)}</div>`
             : "";
 
-        const badge = produto.promocao
-            ? `<span class="badge">🔥 Promoção</span>`
-            : "";
+        const badge = "";
 
         const descricao = produto.descricao
             ? produto.descricao
