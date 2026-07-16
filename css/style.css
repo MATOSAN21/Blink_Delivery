@@ -690,57 +690,64 @@ font-size:30px;
 
 @media(max-width:600px){
 
-.status{
+    .status{
+        min-width:100%;
+        font-size:16px;
+    }
 
-min-width:100%;
+    .btn-whatsapp{
+        width:100%;
+    }
 
-font-size:16px;
+    .info-entrega{
+        flex-direction:column;
+        gap:10px;
+    }
 
-}
+    #lista-produtos{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
 
-.btn-whatsapp{
+    .card{
+        display:flex;
+        flex-direction:column;
+    }
 
-width:100%;
+    .card-imagem{
+        height:220px;
+    }
 
-}
+    .card-body{
+        padding:18px;
+    }
 
-.info-entrega{
+    .card-body h3{
+        font-size:20px;
+    }
 
-flex-direction:column;
+    .preco{
+        font-size:30px;
+    }
 
-gap:10px;
+    .botoes-card{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+        margin-top:15px;
+    }
 
-}
+    .botao-carrinho,
+    .botao-card{
+        width:100%;
+        display:block;
+        padding:16px;
+        font-size:16px;
+    }
 
-#lista-produtos{
-
-grid-template-columns:1fr;
-
-}
-
-.card-imagem{
-
-height:230px;
-
-}
-
-.card-body h3{
-
-font-size:20px;
-
-}
-
-.preco{
-
-font-size:30px;
-
-}
-
-.banner-box{
-
-text-align:center;
-
-}
+    .banner-box{
+        text-align:center;
+    }
 
 }
 
@@ -1221,3 +1228,70 @@ BOTÃO DO CARRINHO
     font-size:22px;
     cursor:pointer;
 }
+
+/* Botões dos produtos */
+.botoes-card{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.botao-carrinho,
+.botao-card{
+    width:100%;
+}
+
+/* Celular */
+@media (max-width:768px){
+
+    .carrinho{
+        width:100%;
+        max-width:100%;
+    }
+
+    .carrinho-item{
+        display:flex;
+        align-items:center;
+        gap:12px;
+    }
+
+    .imagem-carrinho{
+        width:65px;
+        height:65px;
+        object-fit:contain;
+    }
+
+    .info-carrinho{
+        flex:1;
+    }
+
+    .botoes-card{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        width:100%;
+    }
+
+    .botao-carrinho,
+    .botao-card{
+        width:100%;
+        display:block;
+        padding:15px;
+        font-size:16px;
+    }
+
+    .controles{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        margin-top:8px;
+    }
+
+    .controles button{
+        width:34px;
+        height:34px;
+    }
+
+}
+
+/* TESTE GIT */
