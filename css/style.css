@@ -401,20 +401,18 @@ CARD
 .card{
 
     background:#181818;
-
-    border:1px solid #2b2b2b;
-
+    border:1px solid #2c2c2c;
     border-radius:22px;
-
     overflow:hidden;
 
-    transition:.30s;
-
     display:flex;
-
     flex-direction:column;
 
-    position:relative;
+    transition:.35s;
+
+    height:100%;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 
 }
 
@@ -422,9 +420,10 @@ CARD
 
     transform:translateY(-8px);
 
-    border-color:var(--verde);
+    border-color:#2ee95e;
 
-    box-shadow:0 20px 45px rgba(0,0,0,.45);
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.45);
 
 }
 
@@ -434,9 +433,7 @@ IMAGEM
 
 .card-imagem{
 
-    background:white;
-
-    height:270px;
+    height:300px;
 
     display:flex;
 
@@ -444,9 +441,9 @@ IMAGEM
 
     align-items:center;
 
-    padding:25px;
+    background:white;
 
-    position:relative;
+    padding:25px;
 
 }
 
@@ -574,13 +571,13 @@ PREÇO
 
 .preco{
 
-    color:var(--verde);
+    color:#2ee95e;
 
-    font-size:34px;
+    font-size:36px;
 
-    font-weight:bold;
+    font-weight:700;
 
-    margin:6px 0 20px;
+    margin:8px 0;
 
 }
 
@@ -592,31 +589,31 @@ BOTÃO
 
     width:100%;
 
+    padding:16px;
+
     border:none;
 
-    border-radius:14px;
+    border-radius:12px;
 
-    background:var(--verde);
+    background:#2ee95e;
 
-    color:black;
+    color:#111;
+
+    font-size:16px;
 
     font-weight:bold;
 
-    font-size:17px;
-
-    padding:16px;
-
     cursor:pointer;
 
-    transition:.25s;
+    transition:.3s;
 
 }
 
 .botao-card:hover{
 
-    background:var(--verdeHover);
+    transform:translateY(-2px);
 
-    transform:scale(1.03);
+    background:#39ff6f;
 
 }
 
@@ -775,9 +772,9 @@ font-size:30px;
 
     flex-direction:column;
 
-    gap:10px;
+    gap:12px;
 
-    margin-top:auto;
+    margin-top:20px;
 
 }
 
@@ -785,29 +782,31 @@ font-size:30px;
 
     width:100%;
 
+    padding:16px;
+
     border:none;
-
-    background:#2a2a2a;
-
-    color:white;
-
-    padding:15px;
 
     border-radius:12px;
 
-    font-size:17px;
+    background:#252525;
+
+    color:white;
+
+    font-size:16px;
 
     font-weight:bold;
 
     cursor:pointer;
 
-    transition:.25s;
+    transition:.3s;
 
 }
 
 .botao-carrinho:hover{
 
-    background:#3a3a3a;
+    background:#2ee95e;
+
+    color:#111;
 
 }
 
@@ -1294,4 +1293,26 @@ BOTÃO DO CARRINHO
 
 }
 
-/* TESTE GIT */
+/* Todos os cards ficam iguais */
+
+.card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.preco-box{
+
+    margin-top:auto;
+
+}
+
+.botoes-card{
+
+    margin-top:20px;
+
+}
