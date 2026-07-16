@@ -90,7 +90,7 @@ MAIN
             placeholder="🔍 Procurar bebida...">
 
     </section>
-    
+
     <!-- Categorias -->
 
     <section class="categorias">
@@ -148,6 +148,76 @@ MAIN
     </section>
 
 </main>
+
+<!-- =======================================
+CARRINHO
+======================================= -->
+
+<div id="overlay-carrinho" class="overlay-carrinho"></div>
+
+<div id="carrinho" class="carrinho">
+
+    <div class="carrinho-topo">
+
+        <h2>
+
+            🛒 Meu Carrinho
+
+        </h2>
+
+        <button id="fechar-carrinho">
+
+            ✕
+
+        </button>
+
+    </div>
+
+    <div id="lista-carrinho" class="lista-carrinho">
+
+        <p class="carrinho-vazio">
+
+            Seu carrinho está vazio.
+
+        </p>
+
+    </div>
+
+    <div class="carrinho-footer">
+
+        <div class="total-carrinho">
+
+            Total
+
+            <span id="total-carrinho">
+
+                € 0.00
+
+            </span>
+
+        </div>
+
+        <button
+            id="finalizar-pedido"
+            class="btn-finalizar">
+
+            📞 Finalizar Pedido
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- BOTÃO FLUTUANTE DO CARRINHO -->
+
+<button id="btn-carrinho" class="btn-carrinho-flutuante">
+
+    🛒
+
+    <span id="contador-carrinho">0</span>
+
+</button>
 
 <!-- ===========================
 FOOTER

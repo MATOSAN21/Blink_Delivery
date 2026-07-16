@@ -17,6 +17,132 @@ let todosProdutos = [];
 let categoriaAtual = "Todos";
 
 // =======================================
+// CARRINHO
+// =======================================
+
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+const painelCarrinho = document.getElementById("carrinho");
+
+const overlayCarrinho = document.getElementById("overlay-carrinho");
+
+const listaCarrinho = document.getElementById("lista-carrinho");
+
+const totalCarrinho = document.getElementById("total-carrinho");
+
+const btnCarrinho = document.getElementById("btn-carrinho");
+
+const btnFecharCarrinho = document.getElementById("fechar-carrinho");
+
+const btnFinalizar = document.getElementById("finalizar-pedido");
+
+function salvarCarrinho(){
+
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+    atualizarContadorCarrinho();
+
+}
+
+// =======================================
+// ABRIR / FECHAR CARRINHO
+// =======================================
+
+function abrirCarrinho(){
+
+    painelCarrinho.classList.add("ativo");
+
+    overlayCarrinho.classList.add("ativo");
+
+    renderizarCarrinho();
+
+}
+
+function fecharCarrinho(){
+
+    painelCarrinho.classList.remove("ativo");
+
+    overlayCarrinho.classList.remove("ativo");
+
+}
+
+if(btnCarrinho){
+
+    btnCarrinho.addEventListener("click", abrirCarrinho);
+
+}
+
+if(btnFecharCarrinho){
+
+    btnFecharCarrinho.addEventListener("click", fecharCarrinho);
+
+}
+
+if(overlayCarrinho){
+
+    overlayCarrinho.addEventListener("click", fecharCarrinho);
+
+}
+
+// =======================================
+// RENDERIZAR CARRINHO
+// =======================================
+
+function renderizarCarrinho() {
+
+    listaCarrinho.innerHTML = "";
+
+    if (carrinho.length === 0) {
+
+        listaCarrinho.innerHTML = `
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+        `;
+
+        totalCarrinho.textContent = "€ 0.00";
+        return;
+    }
+
+    let total = 0;
+
+    carrinho.forEach(produto => {
+
+        total += Number(produto.preco) * produto.quantidade;
+
+        listaCarrinho.innerHTML += `
+            <div class="carrinho-item">
+
+                <img src="${produto.imagem}" class="imagem-carrinho">
+
+                <div class="info-carrinho">
+
+                    <h3>${produto.nome}</h3>
+
+                    <p>€ ${Number(produto.preco).toFixed(2)}</p>
+
+                    <div class="controles">
+
+                        <button onclick="diminuirQuantidade(${produto.id})">−</button>
+
+                        <span>${produto.quantidade}</span>
+
+                        <button onclick="aumentarQuantidade(${produto.id})">+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        `;
+
+    });
+
+    totalCarrinho.textContent = `€ ${total.toFixed(2)}`;
+
+}
+
+// =======================================
 // CARREGAR PRODUTOS
 // =======================================
 
@@ -125,13 +251,25 @@ function mostrarProdutos(produtos) {
 
                 </div>
 
-                <button
-                    class="botao-card"
-                    onclick="pedirProduto('${produto.nome}', ${produto.preco})">
+                <div class="botoes-card">
 
-                    📞​ Pedir Agora
+                <button
+                    class="botao-carrinho"
+                    onclick="adicionarCarrinho(${produto.id})">
+
+                    🛒 Adicionar
 
                 </button>
+
+                <button
+                    class="botao-card"
+                    onclick="pedirProduto(${produto.id})">
+
+                    📞 Pedir Agora
+
+                </button>
+
+</div>
 
             </div>
 
@@ -147,22 +285,102 @@ function mostrarProdutos(produtos) {
 // PEDIDO WHATSAPP
 // =======================================
 
-function pedirProduto(nome, preco) {
+function pedirProduto(id){
+
+    const produto = todosProdutos.find(p => p.id === id);
 
     const mensagem = `Olá!
 
 Gostaria de pedir:
 
-🛒 ${nome}
+🛒 ${produto.nome}
 
-💶 € ${Number(preco).toFixed(2)}
+💶 € ${Number(produto.preco).toFixed(2)}
 
 Encontrei este produto no site da Blink Delivery.`;
 
-    const url = `https://wa.me/351929137722?text=${encodeURIComponent(mensagem)}`;
+    const url =
+`https://wa.me/351929137722?text=${encodeURIComponent(mensagem)}`;
 
-    window.open(url, "_blank");
+    window.open(url,"_blank");
 
+}
+
+function adicionarCarrinho(id){
+
+    const produto = todosProdutos.find(p=>p.id===id);
+
+    const existente = carrinho.find(p=>p.id===id);
+
+    if(existente){
+
+        existente.quantidade++;
+
+    }
+
+    else{
+
+        carrinho.push({
+
+            id:produto.id,
+
+            nome:produto.nome,
+
+            preco:produto.preco,
+
+            imagem:produto.imagem,
+
+            quantidade:1
+
+        });
+
+    }
+
+    salvarCarrinho();
+
+    renderizarCarrinho();
+
+}
+
+// =======================================
+// AUMENTAR QUANTIDADE
+// =======================================
+
+function aumentarQuantidade(id){
+
+    const produto = carrinho.find(p => p.id === id);
+
+    if(!produto) return;
+
+    produto.quantidade++;
+
+    salvarCarrinho();
+
+    renderizarCarrinho();
+
+}
+
+    // =======================================
+    // DIMINUIR QUANTIDADE
+    // =======================================
+
+function diminuirQuantidade(id){
+
+    const indice = carrinho.findIndex(p => p.id === id);
+
+    if(indice === -1) return;
+
+    carrinho[indice].quantidade--;
+
+    if(carrinho[indice].quantidade <= 0){
+
+        carrinho.splice(indice,1);
+
+    }
+
+    salvarCarrinho();
+
+    renderizarCarrinho();
 }
 
 // =======================================
@@ -418,11 +636,25 @@ function atualizarStatusLoja() {
 
 // Iniciar
 
+function atualizarContadorCarrinho(){
+
+    const contador=document.getElementById("contador-carrinho");
+
+    if(!contador) return;
+
+    const quantidade=carrinho.reduce((t,p)=>t+p.quantidade,0);
+
+    contador.textContent=quantidade;
+
+}
+
 carregarProdutos();
 
 atualizarStatusLoja();
 
-setInterval(atualizarStatusLoja, 60000);
+atualizarContadorCarrinho();
+
+setInterval(atualizarStatusLoja,60000);
 
 // =======================================
 // PESQUISA
@@ -446,6 +678,8 @@ botoesCategoria.forEach(botao=>{
 
 });
 
+btnFinalizar.addEventListener("click", finalizarPedido);
+
 function filtrarProdutos(){
 
     const texto = pesquisa.value.toLowerCase();
@@ -466,5 +700,38 @@ function filtrarProdutos(){
     });
 
     mostrarProdutos(produtosFiltrados);
+
+}
+
+function finalizarPedido(){
+
+    if(carrinho.length === 0){
+
+        alert("Seu carrinho está vazio.");
+
+        return;
+
+    }
+
+    let mensagem = "Olá! Gostaria de pedir:\n\n";
+
+    let total = 0;
+
+    carrinho.forEach(produto=>{
+
+        mensagem += `🛒 ${produto.nome}\n`;
+        mensagem += `Quantidade: ${produto.quantidade}\n`;
+        mensagem += `Subtotal: € ${(produto.preco * produto.quantidade).toFixed(2)}\n\n`;
+
+        total += produto.preco * produto.quantidade;
+
+    });
+
+    mensagem += `💶 Total: € ${total.toFixed(2)}`;
+
+    const url =
+`https://wa.me/351929137722?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url,"_blank");
 
 }
