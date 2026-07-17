@@ -368,9 +368,9 @@ CATÁLOGO
 
 .catalogo{
 
-    width:min(1400px,95%);
+    width:min(1200px,95%);
 
-    margin:35px auto 70xp;
+    margin:35px auto 70px;
 
 }
 
@@ -385,10 +385,15 @@ CATÁLOGO
 }
 
 #lista-produtos{
+
     display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
-    gap:30px;
-    margin-top:30px;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:28px;
+
+    margin-top:25px;
+
 }
 
 /*======================
