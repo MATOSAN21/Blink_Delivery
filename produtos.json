@@ -6,7 +6,7 @@
         "descricao":"Garrafa 700 ml",
         "preco":29.90,
         "precoAntigo":34.90,
-        "imagem":"assets/pinga.jpg",
+        "imagem":"assets/corona.bg",
         "disponivel":true,
         "promocao":true
     },
@@ -18,7 +18,7 @@
         "descricao":"Garrafa 700 ml",
         "preco":22.90,
         "precoAntigo":26.90,
-        "imagem":"assets/pinga.jpg",
+        "imagem":"assets/corona.bg",
         "disponivel":true,
         "promocao":false
     },
@@ -30,7 +30,7 @@
         "descricao":"Lata 250 ml",
         "preco":2.50,
         "precoAntigo":3.00,
-        "imagem":"assets/pinga.jpg",
+        "imagem":"assets/corona.bg",
         "disponivel":true,
         "promocao":true
     }
