@@ -156,7 +156,7 @@ body {
 /* Categorias */
 .categorias {
     display: flex;
-    gap: 15px;
+    gap: 18px;
     width: min(1200px, 95%);
     margin: auto;
     padding-bottom: 10px;
@@ -174,13 +174,16 @@ body {
 
 .categoria {
     flex: none;
-    padding: 12px 22px;
+    padding: 15px 28px;
     background: #202020;
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 35px;
     cursor: pointer;
     transition: .25s;
+    transition:.25s;
+    font-size:16px;
+    font-weight:600;
 }
 
 .categoria:hover,
@@ -244,14 +247,14 @@ body {
 #contador-produtos {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     margin-bottom: 12px;
-    padding: 12px 20px;
+    padding: 10px 16px;
     background: #1c1c1c;
     color: #ffffff;
     border: 1px solid #2c2c2c;
     border-radius: 999px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .3px;
     transition: .25s;
