@@ -388,9 +388,7 @@ CATÁLOGO
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
     gap:30px;
-
-    margin-top:20px;
-    margin-left:42px;
+    margin-top:30px;
 }
 
 /*======================
@@ -1351,8 +1349,4 @@ BOTÃO DO CARRINHO
 
     color:#39ff6f;
 
-}
-
-#contador-produtos{
-    margin-left:42px;
 }
