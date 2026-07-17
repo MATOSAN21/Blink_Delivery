@@ -186,7 +186,40 @@ function mostrarProdutos(produtos) {
 
     listaProdutos.innerHTML = "";
 
-    contadorProdutos.textContent = `${produtos.length} produtos`;
+    let emoji = "📦";
+    let nomeCategoria = "produtos";
+
+    if (categoriaAtual === "Whisky") {
+        emoji = "🥃";
+        nomeCategoria = "Whiskys";
+    }
+    else if (categoriaAtual === "Vodka") {
+        emoji = "🍸";
+        nomeCategoria = "Vodkas";
+    }
+    else if (categoriaAtual === "Gin") {
+        emoji = "🍹";
+        nomeCategoria = "Gins";
+    }
+    else if (categoriaAtual === "Rum") {
+        emoji = "🏴‍☠️";
+        nomeCategoria = "Runs";
+    }
+    else if (categoriaAtual === "Cerveja") {
+        emoji = "🍺";
+        nomeCategoria = "Cervejas";
+    }
+    else if (categoriaAtual === "Vinho") {
+        emoji = "🍷";
+        nomeCategoria = "Vinhos";
+    }
+    else if (categoriaAtual === "Energéticos") {
+        emoji = "⚡";
+        nomeCategoria = "Energéticos";
+    }
+
+    contadorProdutos.innerHTML =
+    `${emoji} ${produtos.length} ${nomeCategoria}`;
 
     produtos.forEach(produto => {
 

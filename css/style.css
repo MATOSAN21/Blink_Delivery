@@ -370,7 +370,7 @@ CATÁLOGO
 
     width:min(1400px,95%);
 
-    margin:70px auto;
+    margin:35px auto 70xp;
 
 }
 
@@ -385,13 +385,12 @@ CATÁLOGO
 }
 
 #lista-produtos{
-
     display:grid;
-
     grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
-
     gap:30px;
 
+    margin-top:20px;
+    margin-left:42px;
 }
 
 /*======================
@@ -493,7 +492,7 @@ INFORMAÇÕES
 
     flex-direction:column;
 
-    padding:22px;
+    padding:26px;
 
     flex:1;
 
@@ -586,6 +585,17 @@ BOTÃO
     transition:.25s;
 
     box-shadow:0 10px 20px rgba(46,233,94,.25);
+
+}
+
+.botao-card:hover{
+
+    transform:translateY(-3px);
+
+    filter:brightness(1.05);
+
+    box-shadow:
+        0 15px 35px rgba(57,255,111,.35);
 
 }
 
@@ -1137,7 +1147,7 @@ BOTÃO DO CARRINHO
 }
 
 .carrinho-item{
-    display:flex;00
+    display:flex;
     gap:15px;
     align-items:center;
     padding:15px 0;
@@ -1297,4 +1307,52 @@ BOTÃO DO CARRINHO
 
     margin-top:20px;
 
+}
+
+#contador-produtos{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 20px;
+
+    background:#1c1c1c;
+
+    border:1px solid #2c2c2c;
+
+    border-radius:999px;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+    margin-bottom:12px;
+
+    transition:.25s;
+
+}
+
+#contador-produtos::before{
+
+    content:"";
+
+    font-size:18px;
+
+}
+
+#contador-produtos:hover{
+
+    border-color:#39ff6f;
+
+    color:#39ff6f;
+
+}
+
+#contador-produtos{
+    margin-left:42px;
 }
