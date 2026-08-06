@@ -4,8 +4,8 @@
         "nome":"Red Label",
         "categoria":"Whisky",
         "descricao":"Garrafa 700 ml",
-        "preco":29.90,
-        "precoAntigo":34.90,
+        "preco":22.00,
+        "precoAntigo":26.90,
         "imagem":"assets/redlabel.png",
         "disponivel":true,
         "promocao":true
@@ -16,11 +16,11 @@
         "nome":"Grant's",
         "categoria":"Whisky",
         "descricao":"Garrafa 700 ml",
-        "preco":22.90,
-        "precoAntigo":26.90,
+        "preco":20.00,
+        "precoAntigo":24.90,
         "imagem":"assets/grants.png",
         "disponivel":true,
-        "promocao":false
+        "promocao":true
     },
 
     {
@@ -28,8 +28,8 @@
         "nome":"Golden Loch",
         "categoria":"Whisky",
         "descricao":"Garrafa 700 ml",
-        "preco":2.50,
-        "precoAntigo":3.00,
+        "preco":14.00,
+        "precoAntigo":16.90,
         "imagem":"assets/golden.png",
         "disponivel":true,
         "promocao":true
@@ -40,8 +40,8 @@
         "nome":"Gin Exotic",
         "categoria":"Gin",
         "descricao":"Garrafa 700 ml",
-        "preco":29.90,
-        "precoAntigo":34.90,
+        "preco":15.00,
+        "precoAntigo":17.90,
         "imagem":"assets/ginexotic.png",
         "disponivel":true,
         "promocao":true
@@ -52,11 +52,11 @@
         "nome":"Gin de Morango",
         "categoria":"Gin",
         "descricao":"Garrafa 700 ml",
-        "preco":22.90,
-        "precoAntigo":26.90,
+        "preco":15.00,
+        "precoAntigo":17.90,
         "imagem":"assets/ginmorango.png",
         "disponivel":true,
-        "promocao":false
+        "promocao":true
     },
 
     {
@@ -64,8 +64,8 @@
         "nome":"Smirnoff",
         "categoria":"Vodka",
         "descricao":"Garrafa 700 ml",
-        "preco":2.50,
-        "precoAntigo":3.00,
+        "preco":18.00,
+        "precoAntigo":21.90,
         "imagem":"assets/smirnoff.png",
         "disponivel":true,
         "promocao":true
@@ -76,8 +76,8 @@
         "nome":"Super Bock",
         "categoria":"Cerveja",
         "descricao":"Garrafa 250 ml",
-        "preco":29.90,
-        "precoAntigo":34.90,
+        "preco":1.50,
+        "precoAntigo":2.50,
         "imagem":"assets/bock.png",
         "disponivel":true,
         "promocao":true
@@ -88,11 +88,11 @@
         "nome":"Blue Moscato",
         "categoria":"Espumante",
         "descricao":"Garrafa 750 ml",
-        "preco":22.90,
-        "precoAntigo":26.90,
+        "preco":5.00,
+        "precoAntigo":8.90,
         "imagem":"assets/blue.png",
         "disponivel":true,
-        "promocao":false
+        "promocao":true
     },
 
     {
@@ -100,8 +100,8 @@
         "nome":"Adega de Pegoẽs",
         "categoria":"Vinho",
         "descricao":"Garrafa 750 ml",
-        "preco":2.50,
-        "precoAntigo":3.00,
+        "preco":4.00,
+        "precoAntigo":6.90,
         "imagem":"assets/vinhopegoes.png",
         "disponivel":true,
         "promocao":true
@@ -112,8 +112,8 @@
         "nome":"Terras de Alleu",
         "categoria":"Vinho",
         "descricao":"Garrafa 750 ml",
-        "preco":29.90,
-        "precoAntigo":34.90,
+        "preco":5.00,
+        "precoAntigo":7.90,
         "imagem":"assets/vinhoalleu.png",
         "disponivel":true,
         "promocao":true
@@ -124,11 +124,11 @@
         "nome":"Energético",
         "categoria":"Energético",
         "descricao":"Garrafa 1.5 L",
-        "preco":22.90,
-        "precoAntigo":26.90,
+        "preco":3.00,
+        "precoAntigo":5.90,
         "imagem":"assets/energetico.png",
         "disponivel":true,
-        "promocao":false
+        "promocao":true
     },
 
     {
@@ -136,8 +136,8 @@
         "nome":"Refrigerante de Cola",
         "categoria":"Refrigerante",
         "descricao":"Garrafa 2 L",
-        "preco":2.50,
-        "precoAntigo":3.00,
+        "preco":3.00,
+        "precoAntigo":5.90,
         "imagem":"assets/cola.png",
         "disponivel":true,
         "promocao":true
@@ -148,8 +148,8 @@
         "nome":"Refigerante de Lima",
         "categoria":"Refrigerante",
         "descricao":"Garrafa 2 L",
-        "preco":2.50,
-        "precoAntigo":3.00,
+        "preco":3.00,
+        "precoAntigo":5.90,
         "imagem":"assets/lima.png",
         "disponivel":true,
         "promocao":true
@@ -160,8 +160,8 @@
         "nome":"Copo 500ml",
         "categoria":"Copo",
         "descricao":"Copo descartável",
-        "preco":2.50,
-        "precoAntigo":3.00,
+        "preco":0.50,
+        "precoAntigo":1.50,
         "imagem":"assets/copo.png",
         "disponivel":true,
         "promocao":true
