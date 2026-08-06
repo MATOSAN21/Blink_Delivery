@@ -27,10 +27,142 @@
         "id":3,
         "nome":"Golden Loch",
         "categoria":"Whisky",
-        "descricao":"Lata 250 ml",
+        "descricao":"Garrafa 700 ml",
         "preco":2.50,
         "precoAntigo":3.00,
         "imagem":"assets/golden.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":4,
+        "nome":"Gin Exotic",
+        "categoria":"Gin",
+        "descricao":"Garrafa 700 ml",
+        "preco":29.90,
+        "precoAntigo":34.90,
+        "imagem":"assets/ginexotic.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":5,
+        "nome":"Gin de Morango",
+        "categoria":"Gin",
+        "descricao":"Garrafa 700 ml",
+        "preco":22.90,
+        "precoAntigo":26.90,
+        "imagem":"assets/ginmorango.png",
+        "disponivel":true,
+        "promocao":false
+    },
+
+    {
+        "id":6,
+        "nome":"Smirnoff",
+        "categoria":"Vodka",
+        "descricao":"Garrafa 700 ml",
+        "preco":2.50,
+        "precoAntigo":3.00,
+        "imagem":"assets/smirnoff.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":7,
+        "nome":"Super Bock",
+        "categoria":"Cerveja",
+        "descricao":"Garrafa 250 ml",
+        "preco":29.90,
+        "precoAntigo":34.90,
+        "imagem":"assets/bock.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":8,
+        "nome":"Blue Moscato",
+        "categoria":"Espumante",
+        "descricao":"Garrafa 750 ml",
+        "preco":22.90,
+        "precoAntigo":26.90,
+        "imagem":"assets/blue.png",
+        "disponivel":true,
+        "promocao":false
+    },
+
+    {
+        "id":9,
+        "nome":"Adega de Pegoẽs",
+        "categoria":"Vinho",
+        "descricao":"Garrafa 750 ml",
+        "preco":2.50,
+        "precoAntigo":3.00,
+        "imagem":"assets/vinhopegoes.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":10,
+        "nome":"Terras de Alleu",
+        "categoria":"Vinho",
+        "descricao":"Garrafa 750 ml",
+        "preco":29.90,
+        "precoAntigo":34.90,
+        "imagem":"assets/vinhoalleu.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":11,
+        "nome":"Energético",
+        "categoria":"Energético",
+        "descricao":"Garrafa 1.5 L",
+        "preco":22.90,
+        "precoAntigo":26.90,
+        "imagem":"assets/energetico.png",
+        "disponivel":true,
+        "promocao":false
+    },
+
+    {
+        "id":12,
+        "nome":"Refrigerante de Cola",
+        "categoria":"Refrigerante",
+        "descricao":"Garrafa 2 L",
+        "preco":2.50,
+        "precoAntigo":3.00,
+        "imagem":"assets/cola.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":13,
+        "nome":"Refigerante de Lima",
+        "categoria":"Refrigerante",
+        "descricao":"Garrafa 2 L",
+        "preco":2.50,
+        "precoAntigo":3.00,
+        "imagem":"assets/lima.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":14,
+        "nome":"Copo 500ml",
+        "categoria":"Copo",
+        "descricao":"Copo descartável",
+        "preco":2.50,
+        "precoAntigo":3.00,
+        "imagem":"assets/copo.png",
         "disponivel":true,
         "promocao":true
     }

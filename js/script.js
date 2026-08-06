@@ -191,32 +191,41 @@ function mostrarProdutos(produtos) {
 
     if (categoriaAtual === "Whisky") {
         emoji = "🥃";
-        nomeCategoria = "Whiskys";
+        nomeCategoria = "Whisky";
     }
     else if (categoriaAtual === "Vodka") {
         emoji = "🍸";
-        nomeCategoria = "Vodkas";
+        nomeCategoria = "Vodka";
     }
     else if (categoriaAtual === "Gin") {
         emoji = "🍹";
-        nomeCategoria = "Gins";
+        nomeCategoria = "Gin";
     }
     else if (categoriaAtual === "Rum") {
         emoji = "🏴‍☠️";
-        nomeCategoria = "Runs";
+        nomeCategoria = "Run";
     }
     else if (categoriaAtual === "Cerveja") {
         emoji = "🍺";
-        nomeCategoria = "Cervejas";
+        nomeCategoria = "Cerveja";
     }
     else if (categoriaAtual === "Vinho") {
         emoji = "🍷";
-        nomeCategoria = "Vinhos";
+        nomeCategoria = "Vinho";
     }
-    else if (categoriaAtual === "Energéticos") {
+    else if (categoriaAtual === "Energético") {
         emoji = "⚡";
-        nomeCategoria = "Energéticos";
+        nomeCategoria = "Energético";
     }
+    else if (categoriaAtual === "Espumante") {
+        emoji = "🍾";
+        nomeCategoria = "Espumante";
+    }
+     else if (categoriaAtual === "Refrigerante") {
+        emoji = "🥤";
+        nomeCategoria = "Refrigerante";
+    }
+
 
     contadorProdutos.innerHTML =
     `${emoji} ${produtos.length} ${nomeCategoria}`;
