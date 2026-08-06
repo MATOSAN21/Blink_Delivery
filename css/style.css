@@ -290,22 +290,19 @@ body {
     transform: translateY(-10px);
 }
 
-.card-imagem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    padding: 0;
-    background: #fff;
-    overflow: hidden;
+.card-imagem{
+    height:380px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    overflow:hidden;
 }
 
-.card-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition:.35s;
-
+.card-imagem img{
+    height:90%;
+    width:auto;
+    object-fit:contain;
 }
 
 .card:hover .card-imagem img {

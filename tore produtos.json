@@ -1,0 +1,43 @@
+[1mdiff --git a/produtos.json b/produtos.json[m
+[1mindex 12c9b77..e69de29 100644[m
+[1m--- a/produtos.json[m
+[1m+++ b/produtos.json[m
+[36m@@ -1,37 +0,0 @@[m
+[31m-[[m
+[31m-    {[m
+[31m-        "id":1,[m
+[31m-        "nome":"Jack Daniels",[m
+[31m-        "categoria":"Whisky",[m
+[31m-        "descricao":"Garrafa 700 ml",[m
+[31m-        "preco":29.90,[m
+[31m-        "precoAntigo":34.90,[m
+[31m-        "imagem":"assets/corona.bg",[m
+[31m-        "disponivel":true,[m
+[31m-        "promocao":true[m
+[31m-    },[m
+[31m-[m
+[31m-    {[m
+[31m-        "id":2,[m
+[31m-        "nome":"Absolut",[m
+[31m-        "categoria":"Vodka",[m
+[31m-        "descricao":"Garrafa 700 ml",[m
+[31m-        "preco":22.90,[m
+[31m-        "precoAntigo":26.90,[m
+[31m-        "imagem":"assets/corona.bg",[m
+[31m-        "disponivel":true,[m
+[31m-        "promocao":false[m
+[31m-    },[m
+[31m-[m
+[31m-    {[m
+[31m-        "id":3,[m
+[31m-        "nome":"Red Bull",[m
+[31m-        "categoria":"Energéticos",[m
+[31m-        "descricao":"Lata 250 ml",[m
+[31m-        "preco":2.50,[m
+[31m-        "precoAntigo":3.00,[m
+[31m-        "imagem":"assets/corona.bg",[m
+[31m-        "disponivel":true,[m
+[31m-        "promocao":true[m
+[31m-    }[m
+[31m-][m
+\ No newline at end of file[m

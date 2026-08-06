@@ -1,36 +1,36 @@
 [
     {
         "id":1,
-        "nome":"Jack Daniels",
+        "nome":"Red Label",
         "categoria":"Whisky",
         "descricao":"Garrafa 700 ml",
         "preco":29.90,
         "precoAntigo":34.90,
-        "imagem":"assets/corona.bg",
+        "imagem":"assets/redlabel.png",
         "disponivel":true,
         "promocao":true
     },
 
     {
         "id":2,
-        "nome":"Absolut",
-        "categoria":"Vodka",
+        "nome":"Grant's",
+        "categoria":"Whisky",
         "descricao":"Garrafa 700 ml",
         "preco":22.90,
         "precoAntigo":26.90,
-        "imagem":"assets/corona.bg",
+        "imagem":"assets/grants.png",
         "disponivel":true,
         "promocao":false
     },
 
     {
         "id":3,
-        "nome":"Red Bull",
-        "categoria":"Energéticos",
+        "nome":"Golden Loch",
+        "categoria":"Whisky",
         "descricao":"Lata 250 ml",
         "preco":2.50,
         "precoAntigo":3.00,
-        "imagem":"assets/corona.bg",
+        "imagem":"assets/golden.png",
         "disponivel":true,
         "promocao":true
     }
