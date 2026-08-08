@@ -435,6 +435,7 @@ function diminuirQuantidade(id){
 const HORARIOS = {
 
     0: [
+        { abre: 0, fecha: 4 },
         { abre: 12, fecha: 24 }
     ], // Domingo
 
@@ -455,13 +456,12 @@ const HORARIOS = {
     ], // Quinta
 
     5: [
-        { abre: 12, fecha: 16 },
-        { abre: 20, fecha: 4 }
+        { abre: 12, fecha: 24 }
     ], // Sexta
 
     6: [
-        { abre: 12, fecha: 16 },
-        { abre: 23, fecha: 4 }
+        { abre: 0, fecha: 4 },
+        { abre: 12, fecha: 24 }
     ] // Sábado
 
 };
