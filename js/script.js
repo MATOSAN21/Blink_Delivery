@@ -482,6 +482,38 @@ const NOMES_DIAS = [
     "Sábado"
 ];
 
+function obterHorarioFechamento(dia, periodo) {
+
+    // Se não fecha à meia-noite, retorna o horário normal
+    if (periodo.fecha !== 24) {
+
+        return `${String(periodo.fecha).padStart(2, "0")}:00`;
+
+    }
+
+    // Verifica o próximo dia
+    const proximoDia = (dia + 1) % 7;
+
+    const horariosProximoDia = HORARIOS[proximoDia];
+
+    // Se o próximo dia começa com um período da meia-noite
+    // até outro horário, significa que a loja continua aberta
+    if (
+        horariosProximoDia &&
+        horariosProximoDia.length > 0 &&
+        horariosProximoDia[0].abre === 0 &&
+        horariosProximoDia[0].fecha > 0
+    ) {
+
+        return `${String(horariosProximoDia[0].fecha).padStart(2, "0")}:00`;
+
+    }
+
+    // Caso contrário, fecha normalmente à meia-noite
+    return "00:00";
+
+}
+
 function atualizarStatusLoja() {
 
     if (!statusLoja) return;
@@ -556,7 +588,7 @@ function atualizarStatusLoja() {
 
                     <span>🕒 Fecha às</span>
 
-                    <strong>${periodoAtual.fecha === 24 ? "00" : String(periodoAtual.fecha).padStart(2, "0")}:00</strong>
+                    <strong>${obterHorarioFechamento(dia, periodoAtual)}</strong>
 
                 </div>
 
