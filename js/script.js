@@ -189,7 +189,11 @@ function mostrarProdutos(produtos) {
     let emoji = "📦";
     let nomeCategoria = "produtos";
 
-    if (categoriaAtual === "Whisky") {
+    if (categoriaAtual === "Pods") {
+        emoji = "💨";
+        nomeCategoria = "Pods";
+    }
+    else if (categoriaAtual === "Whisky") {
         emoji = "🥃";
         nomeCategoria = "Whisky";
     }

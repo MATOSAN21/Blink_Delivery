@@ -165,5 +165,65 @@
         "imagem":"assets/copo.png",
         "disponivel":true,
         "promocao":true
+    },
+
+    {
+        "id":15,
+        "nome":"VapSolo",
+        "categoria":"Pods",
+        "descricao":"Lemon Lime, Strawberry Watermelon, Blackberry Ice",
+        "preco":20.00,
+        "precoAntigo":25.00,
+        "imagem":"assets/vapsololsb.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":16,
+        "nome":"VapSolo",
+        "categoria":"Pods",
+        "descricao":"Peach Berry, Black Ice, Strawberry Vanilla Cola",
+        "preco":20.00,
+        "precoAntigo":25.00,
+        "imagem":"assets/vapsolopbs.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":17,
+        "nome":"VapSolo",
+        "categoria":"Pods",
+        "descricao":"Blackcurrant Ice, Pink Lemonade, Kiwi Passion Fruit Guava",
+        "preco":20.00,
+        "precoAntigo":25.00,
+        "imagem":"assets/vapsolobpk.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":18,
+        "nome":"VapSolo",
+        "categoria":"Pods",
+        "descricao":"Blueberry Sour Raspberry, strawberry Mango, Lemon Cola",
+        "preco":20.00,
+        "precoAntigo":25.00,
+        "imagem":"assets/vapsolobsl.png",
+        "disponivel":true,
+        "promocao":true
+    },
+
+    {
+        "id":19,
+        "nome":"VapSolo",
+        "categoria":"Pods",
+        "descricao":"Kiwi Passion Fruit, Love 66, Vanilla",
+        "preco":20.00,
+        "precoAntigo":25.00,
+        "imagem":"assets/vapsoloklv.png",
+        "disponivel":true,
+        "promocao":true
     }
 ]
