@@ -16,7 +16,7 @@
         "nome":"Grant's",
         "categoria":"Whisky",
         "descricao":"Garrafa 700 ml",
-        "preco":20.00,
+        "preco":18.00,
         "precoAntigo":24.90,
         "imagem":"assets/grants.png",
         "disponivel":true,
