@@ -344,7 +344,7 @@ Gostaria de pedir:
 Encontrei este produto no site da Blink Delivery.`;
 
     const url =
-`https://wa.me/351912582711?text=${encodeURIComponent(mensagem)}`;
+`https://wa.me/351929137722?text=${encodeURIComponent(mensagem)}`;
 
     window.open(url,"_blank");
 
@@ -806,7 +806,7 @@ function finalizarPedido(){
     mensagem += `💶 Total: € ${total.toFixed(2)}`;
 
     const url =
-`https://wa.me/351912582711?text=${encodeURIComponent(mensagem)}`;
+`https://wa.me/351929137722?text=${encodeURIComponent(mensagem)}`;
 
     window.open(url,"_blank");
 
